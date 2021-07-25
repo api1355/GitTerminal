@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        .heading
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 800;
+            color: rgba(128, 128, 128, 0.726);
+            line-height: 5px;
+            font-size: 20px;
+        }
+        .content
+        {
+            display: flex;
+            /* border-bottom: groove; */
+        }
+        .body
+        {
+            position: absolute;
+            top: 35%;
+            left: 10%;
+            width: 1140px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .records
+        {
+            list-style: none;
+            display: flex;
+            flex-direction:row;
+            border-top: groove 1px;
+            border-bottom: groove 1px;
+            border-color: rgb(223, 221, 221);
+            margin-top: -17px;
+            width: 1100px;
+        }
+        li
+        {
+            height: 50px;
+            color: grey;
+            font-size: 20px;
+        }
+        .div
+        {
+            background-color: rgba(220, 227, 233, 0.87);
+            margin-right: 10px;
+            width: 40px;
+            margin-left: 50px;
+        }
+        .fa
+        {
+            margin: 15px 5px;
+        }
+        .text
+        {
+            margin: 15px 30px -15px;
+            color: rgb(25, 211, 211);
+            font-size: 16px;
+            font-weight: 800;
+        }
+        .add-record
+        {
+            background-color: rgba(33, 91, 216, 0.863);
+            padding: 2px;
+            color: white;
+            text-align: center;
+            font-weight: 200;
+            border-radius: 7px;
+            font-size: 20px;
+            position: absolute;
+            width: 1140px;
+        }
+    </style>
+    <body>
+            <div class="body">
+                <p class="heading">MATHEMATICS</p>
+                <hr>
+                <div class="content">
+                    <div style="width: 300px;">
+                        <a><strong>Actions</strong></a>
+                        <div style="color: grey;">
+                        <a>Move,</a>
+                        <a>Ident,</a>
+                        </div>
+                        <div style="color: grey;">
+                            <a>Outdent,</a>
+                            <a>Delete</a>
+                        </div>
+                    </div>
+
+                    <div style="width: 200px;">
+                        <a><strong>Standard</strong></a>
+                        <div style="color: grey;">
+                            <a>The text of the standard</a>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div id="table-records">
+                    <!-- <ul class="records">
+                        <li><i class="fa fa-arrows" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-arrow-left" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-trash-o" aria-hidden="true"></i></li>
+                        <li class="div"></li>
+                        <li class="text">Numbers</li>
+                    </ul>
+                    <ul class="records">
+                        <li><i class="fa fa-arrows" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-arrow-left" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-trash-o" aria-hidden="true"></i></li>
+                        <li class="div"></li>
+                        <li class="text">Numbers</li>
+                    </ul>
+                    <ul class="records">
+                        <li><i class="fa fa-arrows" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-arrow-left" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-trash-o" aria-hidden="true"></i></li>
+                        <li class="div"></li>
+                        <li class="text">Numbers</li>
+                    </ul> -->
+                </div>
+                <a class="add-record" onclick="add()"><i class="fa fa-plus-circle" aria-hidden="true"></i>Add a standard</a>
+            </div>
+    </body>
+</html>
+<script>
+    function add()
+    {
+        var ul=document.createElement('ul');
+        ul.className="records";
+        var doc=document.getElementById("table-records");
+        ul.innerHTML="<li><i class=\"fa fa-arrows\" aria-hidden=\"true\"></i></li>"+
+                        "<li><i class=\"fa fa-arrow-left\" aria-hidden=\"true\"></i></li>"+
+                        "<li><i class=\"fa fa-arrow-right\" aria-hidden=\"true\"></i></li>"+
+                        "<li><i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i></li>"+
+                        "<li class=\"div\"></li>"+
+                        "<li class=\"text\">Numbers</li>";
+        doc.appendChild(ul);
+    }
+</script>
